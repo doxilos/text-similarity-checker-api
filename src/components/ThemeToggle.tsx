@@ -36,7 +36,7 @@ const ThemeToggle = (props: Props) => {
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")}>
           <Laptop className="mr-2 h-4 w-4" />
-          <span>System</span>
+          <span>System </span>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
