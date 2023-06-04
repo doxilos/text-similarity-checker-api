@@ -1,6 +1,6 @@
 import React, { HTMLAttributes, forwardRef } from "react"
 import { VariantProps, cva } from "class-variance-authority"
-import { cn } from "@/app/lib/utils"
+import { cn } from "@/lib/utils"
 
 const headingVariants = cva(
   "text-black dark:text-white text-center lg:text-left font-extrabold leading-tight tracking-tight",
@@ -22,7 +22,7 @@ interface Props
   extends HTMLAttributes<HTMLHeadingElement>,
     VariantProps<typeof headingVariants> {}
 
-const Paragraph = forwardRef<HTMLHeadingElement, Props>(
+const LargeHeading = forwardRef<HTMLHeadingElement, Props>(
   ({ className, size, children, ...props }, ref) => {
     return (
       <h1
@@ -36,6 +36,6 @@ const Paragraph = forwardRef<HTMLHeadingElement, Props>(
   }
 )
 
-Paragraph.displayName = "Paragraph"
+LargeHeading.displayName = "LargeHeading"
 
-export default Paragraph
+export default LargeHeading
