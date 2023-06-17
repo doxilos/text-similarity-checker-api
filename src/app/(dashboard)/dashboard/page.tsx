@@ -22,7 +22,10 @@ const page = async (props: Props) => {
         where: {userId: user.user.id, enabled: true}
     })
     return <div className="max-w-7xl mx-auto mt-16">
-        {apiKey ? <ApiDashboard/> : <RequestApiKey/>}
+        {apiKey ?
+            // @ts-expect-error Server Component
+            (<ApiDashboard/>)
+            : (<RequestApiKey/>)}
     </div>
 }
 
